@@ -72,6 +72,7 @@ export default {
       const styles = [].slice.call(document.querySelectorAll('style'))
         .filter(style => {
           const text = style.innerText
+          // test() 方法检索字符串中的指定值。返回值是 true
           return new RegExp(oldVal, 'i').test(text) && !/Chalk Variables/.test(text)
         })
       styles.forEach(style => {
